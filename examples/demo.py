@@ -1,6 +1,7 @@
 import asyncio
 from collections import namedtuple
 from dataclasses import dataclass
+from pprint import pprint
 from typing import NamedTuple
 
 from pussql import Pussql, Factory
@@ -75,8 +76,9 @@ async def main():
         user_exec = UsersExecutor(transaction_session)
         cars_exec = CarsExecutor(transaction_session)
 
-        new_user = await user_exec.insert_user('Jeff')
-        await cars_exec.insert_car("Toyota Corolla", new_user)
+        pogger = await user_exec.insert_user('Pogger')
+        await cars_exec.insert_car("Honda Civic", pogger)
+        await cars_exec.insert_car("Cock & Balls", pogger)
 
         raise Rollback
 
@@ -91,8 +93,10 @@ async def main():
         user_1 = await user_exec.select_user(id_)
         print(f'user with id {id_}:', user_1)
 
+
         cars = await cars_exec.select_cars()
-        print('Cars:', cars)
+        print('Cars:')
+        pprint(cars)
 
         joined_q = await user_exec.select_joined_cars()
         print(joined_q)
