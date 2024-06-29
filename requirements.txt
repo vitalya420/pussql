@@ -1,0 +1,2 @@
+pussql~=0.1
+aiosqlite~=0.20.0

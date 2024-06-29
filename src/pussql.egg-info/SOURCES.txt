@@ -1,0 +1,15 @@
+README.md
+setup.py
+src/pussql/__init__.py
+src/pussql/pussql.py
+src/pussql/query.py
+src/pussql/session.py
+src/pussql/utils.py
+src/pussql.egg-info/PKG-INFO
+src/pussql.egg-info/SOURCES.txt
+src/pussql.egg-info/dependency_links.txt
+src/pussql.egg-info/top_level.txt
+src/pussql/base/__init__.py
+src/pussql/base/executor.py
+src/pussql/executors/__init__.py
+src/pussql/executors/sqlite.py
